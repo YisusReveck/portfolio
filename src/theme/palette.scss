@@ -1,0 +1,132 @@
+:root {
+  --surface: #e7e2d9;
+  --on-surface: #1d1b16;
+  --surface-variant: #cdc6b4;
+  --on-surface-variant: #343024;
+  --surface-tint: #987100;
+  --primary: #795900;
+  --on-primary: #ffffff;
+  --secondary: #5a5e6b;
+  --on-secondary: #ffffff;
+  --tertiary: #7b5641;
+  --on-tertiary: #ffffff;
+  --outline: #7c7767;
+  --outline-variant: #cdc6b4;
+  --error: #b4271f;
+  --on-error: #ffffff;
+}
+
+html[data-theme="dark"] {
+  --surface: #15130e;
+  --on-surface: #e7e2d9;
+  --surface-variant: #1e1c10;
+  --on-surface-variant: #cdc6b4;
+  --surface-tint: #fbbc00;
+  --primary: #fbbc00;
+  --on-primary: #402d00;
+  --secondary: #c3c6d5;
+  --on-secondary: #2c303c;
+  --tertiary: #edbca2;
+  --on-tertiary: #472917;
+  --outline: #969080;
+  --outline-variant: #4b4739;
+  --error: #ffb4aa;
+  --on-error: #690003;
+}
+/* ── Paletas Tonales Completas (Visualización en Editor) ── */
+$palette-primary: (
+  0: #000000,
+  10: #261a00,
+  20: #402d00,
+  30: #5c4300,
+  40: #795900,
+  50: #987100,
+  60: #b88900,
+  70: #d9a200,
+  80: #fbbc00,
+  90: #ffdfa0,
+  95: #ffefd5,
+  98: #fff8f2,
+  100: #ffffff,
+);
+
+$palette-secondary: (
+  0: #000000,
+  10: #171b26,
+  20: #2c303c,
+  30: #434653,
+  40: #5a5e6b,
+  50: #737784,
+  60: #8d909e,
+  70: #a7abb9,
+  80: #c3c6d5,
+  90: #dfe2f1,
+  95: #eef0ff,
+  98: #faf8ff,
+  100: #ffffff,
+);
+
+$palette-tertiary: (
+  0: #000000,
+  10: #2f1505,
+  20: #472917,
+  30: #613f2b,
+  40: #7b5641,
+  50: #976e58,
+  60: #b38770,
+  70: #d0a189,
+  80: #edbca2,
+  90: #ffdbc9,
+  95: #ffede5,
+  98: #fff8f6,
+  100: #ffffff,
+);
+
+$palette-neutral: (
+  0: #000000,
+  10: #1d1b16,
+  20: #32302a,
+  30: #494740,
+  40: #615e57,
+  50: #7a776f,
+  60: #949088,
+  70: #afaba2,
+  80: #cbc6bd,
+  90: #e7e2d9,
+  95: #f6f0e7,
+  98: #fff9ef,
+  100: #ffffff,
+);
+
+$palette-neutral-variant: (
+  0: #000000,
+  10: #1e1c10,
+  20: #343024,
+  30: #4b4739,
+  40: #635e50,
+  50: #7c7767,
+  60: #969080,
+  70: #b1ab9a,
+  80: #cdc6b4,
+  90: #e9e2d0,
+  95: #f8f0dd,
+  98: #fff9ee,
+  100: #ffffff,
+);
+
+$palette-error: (
+  0: #000000,
+  10: #410001,
+  20: #690003,
+  30: #910809,
+  40: #b4271f,
+  50: #d74034,
+  60: #fa5a4a,
+  70: #ff8a7b,
+  80: #ffb4aa,
+  90: #ffdad5,
+  95: #ffedea,
+  98: #fff8f7,
+  100: #ffffff,
+);
+

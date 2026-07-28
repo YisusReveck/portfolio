@@ -1,0 +1,104 @@
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  background-color: color-mix(in srgb, var(--surface) 80%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--outline) 50%, transparent);
+  box-shadow:
+    0 1px 2px color-mix(in srgb, var(--surface) 60%, transparent),
+    0 4px 12px color-mix(in srgb, var(--surface) 40%, transparent);
+  height: var(--nav-height);
+  transition:
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.container {
+  // es grid por diseño
+  align-items: center;
+  height: var(--nav-height);
+  opacity: 1;
+  transition: opacity 300ms ease;
+}
+
+:host.changing-language .container {
+  opacity: 0;
+}
+
+.my-name {
+  font-size: 1.2em;
+  font-weight: 700;
+  transform: translateY(-2px);
+  color: var(--surface-tint);
+}
+
+.right-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  height: calc(var(--nav-height) - 2px);
+
+  p {
+    cursor: pointer;
+    position: relative;
+    transform: translateY(-1px);
+
+    &.active {
+      font-weight: 700;
+
+      &::after {
+        content: '';
+
+        // transform: translateY(-1px);
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        bottom: -6px;
+
+        height: 2px;
+
+        background: var(--on-surface);
+      }
+    }
+  }
+}
+
+button {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+
+  border: 1px solid var(--outline);
+  padding: 6px 8px 4px;
+  margin: 4px 0;
+
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+  font-weight: 400;
+
+  user-select: none;
+
+  .icon-language {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    align-items: baseline;
+    transform: translateY(1px);
+  }
+
+  .icon-theme {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    align-items: baseline;
+    transform: translateY(1px);
+  }
+}

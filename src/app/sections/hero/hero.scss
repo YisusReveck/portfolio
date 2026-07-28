@@ -1,0 +1,255 @@
+:host {
+  background: radial-gradient(
+    circle 400px at 75% 50%,
+    color-mix(in srgb, var(--surface), var(--surface-variant) 80%) 0%,
+    var(--surface) 100%
+  );
+  min-height: calc(100dvh - var(--nav-height));
+}
+
+:host-context(html[data-theme='light']) {
+  background: radial-gradient(
+    circle 400px at 75% 50%,
+    color-mix(in srgb, var(--surface), var(--surface-variant) 30%) 0%,
+    var(--surface) 100%
+  );
+}
+
+section {
+  min-height: calc(100dvh - var(--nav-height));
+  position: relative;
+}
+
+// LEFT
+.title {
+  padding-top: 1rem;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.left {
+  padding-top: 2rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-wrap: balance;
+  z-index: 2;
+}
+
+.description {
+  padding-top: 1rem;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.typewriter {
+  display: inline;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.typewriter::after {
+  content: '';
+  display: inline-block;
+  width: 0.6em;
+  height: 1em;
+  transform: translateY(-0.1em);
+  vertical-align: text-bottom;
+  background: var(--surface-tint);
+  animation: blink 0.5s infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+  color: var(--primary);
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: var(--primary);
+    display: flex;
+    align-items: baseline;
+    padding: 0.2rem;
+    cursor: pointer;
+  }
+
+  a:hover span {
+    color: var(--primary);
+  }
+
+  span {
+    font-size: 1.2rem;
+    color: var(--on-surface);
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+    align-self: flex-end;
+    margin-bottom: 3px;
+  }
+
+  #svg-email {
+    margin-bottom: 2px;
+  }
+}
+
+// RIGHT
+.right {
+  position: relative;
+}
+
+// Estilo común de las Polaroids
+.polaroid {
+  position: absolute;
+  width: 300px;
+  background: var(--on-surface);
+  padding: 12px 12px 60px;
+  border: 1px solid rgb(from var(--outline) r g b / 20%);
+  box-shadow:
+    0 10px 24px rgb(0 0 0 / 18%),
+    0 2px 6px rgb(0 0 0 / 8%);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  user-select: none;
+}
+
+:host-context(html[data-theme='light']) .polaroid {
+  background: var(--surface);
+
+  &__caption {
+    color: var(--on-surface);
+  }
+}
+
+.polaroid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.polaroid__caption {
+  position: absolute;
+  bottom: calc((60px - 1rem) / 2);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1rem;
+  color: var(--surface);
+  font-family: 'Caveat', cursive;
+}
+
+.polaroid {
+  z-index: 1;
+}
+
+.polaroid.active {
+  z-index: 2;
+}
+
+/* ---------- Tú ---------- */
+
+#photo_me {
+  left: 50%;
+  top: 50px;
+  transform: translateX(-90%) rotate(-6deg) scale(1);
+}
+
+#photo_me:hover {
+  transform: translateX(-90%) rotate(-6deg) scale(1.05);
+}
+
+/* ---------- Michi ---------- */
+
+#photo_cat {
+  left: 50%;
+  top: 130px;
+  transform: translateX(-10%) rotate(8deg) scale(1);
+}
+
+#photo_cat:hover {
+  transform: translateX(-10%) rotate(8deg) scale(1.05);
+}
+
+.palabras_japonesas_1,
+.palabras_japonesas_2 {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  user-select: none;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-self: flex-end;
+  gap: 0.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--tertiary) 30%, transparent);
+  position: absolute;
+  z-index: 1;
+}
+
+.palabras_japonesas_1 {
+  top: 3rem;
+  right: 1rem;
+}
+
+.palabras_japonesas_2 {
+  bottom: 3rem;
+  left: 1rem;
+}
+
+// Tablet
+@media (min-width: 768px) {
+  .typewriter {
+    white-space: nowrap;
+  }
+}
+
+// Desktop
+@media (min-width: 1200px) {
+  .typewriter {
+    white-space: pre-line;
+    width: 100%;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .left {
+    padding-top: 14rem;
+    // padding-right: 5rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .right {
+    min-height: calc(100dvh - var(--nav-height));
+  }
+
+  #photo_me {
+    top: calc(50% - 250px);
+  }
+
+  #photo_cat {
+    top: calc(50% - 150px);
+  }
+}

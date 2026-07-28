@@ -1,59 +1,41 @@
-# Portfolio
+# Portafolio web
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.0.1.
+Portafolio web personal sobre mi experiencia y proyectos en programación.
 
-## Development server
+**Demo:** [Ver sitio](https://yisusreveck.github.io/portfolio/)
 
-To start a local development server, run:
+## Capturas
+
+![preview del portafolio web](image.png)
+
+## Tecnologías
+
+- Angular
+- Material Design 3
+- emailjs
+
+## Características
+
+- Modo claro/oscuro
+- Soporte multilenguaje (Inglés/Español)
+- Diseño responsive
+- Formulario de contacto funcional (EmailJS)
+- Sección de proyectos destacados y experiencia profesional con animaciones
+
+## Instalación local
 
 ```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Licencia
 
-## Code scaffolding
+- **Código:** MIT — ver [LICENSE](LICENSE).
+- **Contenido de autoría propia, ubicado en `/public/own`:** Todos los derechos reservados.
+- **Contenido de autoría propia, ubicado en `/public/cc`:** CC BY-NC-ND 4.0 — ver [texto completo](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode).
+- **Contenido de terceros:** algunos assets provienen de terceros y ese contenido **no** está cubierto por ninguna de las licencias anteriores. Ver [CREDITS.md](CREDITS.md) para el detalle de origen de cada asset.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Autor
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Jesús Miranda | YisusReveck — [LinkedIn](https://www.linkedin.com/in/jesusm147/) · [GitHub](https://github.com/YisusReveck)

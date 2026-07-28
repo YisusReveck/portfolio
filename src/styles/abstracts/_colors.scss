@@ -1,0 +1,66 @@
+// ## Colors
+// This design system operates primarily in a high-contrast dark mode to simulate the "Night Café" atmosphere.
+
+// - **Amber (#FFBF00):** Used for primary actions, highlights, and "glow" states. It represents the warm light of a desk lamp or a neon bar sign.
+// - **Ink Navy (#1A1E29):** The deep, cool base for surfaces and backgrounds, providing a "nocturnal" depth that feels more sophisticated than pure black.
+// - **Aged Paper (#F4ECD8):** Used for primary text and secondary container surfaces to provide a tactile, literary feel.
+// - **Deep Sepia (#704214):** Used for borders, dividers, and decorative textures to bridge the gap between the navy and the amber.
+
+:root {
+  // estos son los colores que representan las 4 paletas de colores
+  // primary: #FFBF00
+  // secondary: #1A1E29
+  // tertiary: #704214
+  // neutral: #F4ECD8
+
+  // estos son los supuestos colores que me dio el DESIGN.md de google stitch, pero se me hace raro que por ejemplo el primary no aparece en ninguna variación de colores (12 colores desde #ffffff hasta #000000 de ninguna de las 4 paletas, y así con varios
+  --surface: #161308;
+  --on-surface: #eae2ce;
+  --surface-variant: #383527;
+  --on-surface-variant: #d4c5ab;
+
+  --primary: #ffe2ab;
+  --on-primary: #402d00;
+  --primary-container: #ffbf00;
+  --on-primary-container: #6d5000;
+
+  --secondary: #c3c6d5;
+  --on-secondary: #2c303c;
+  --secondary-container: #434653;
+  --on-secondary-container: b1b4c3;
+
+  --tertiary: #ffe0c9;
+  --on-tertiary: #4c2700;
+  --tertiary-container: #febc83;
+  --on-tertiary-container: #79491b;
+
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --on-error-container: #ffdad6;
+
+  --inverse-primary: #795900;
+  --surface-tint: #fbbc00; // por ejemplo, este sí existe, corresponde al primary 4 (del blanco al negro, es la posición 4)
+  --outline: #9c8f78;
+  --outline-variant: #504532;
+}
+
+/* Variables para el Tema Diurno */
+html[data-theme='light'] {
+  --surface: #f5edd8;
+  --on-surface: #2a1f10;
+  --surface-variant: #e2d9c2;
+  --on-surface-variant: #504532;
+
+  --primary: #795900;
+  --on-primary: #ffffff;
+  --primary-container: #ffbf00;
+  --on-primary-container: #402d00;
+
+  --secondary: #5a5d6b;
+  --on-secondary: #ffffff;
+  --secondary-container: #e2e5f4;
+  --on-secondary-container: #171a26;
+
+  /* Agrega o modifica aquí el resto de colores conforme los necesites */
+}

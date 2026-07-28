@@ -1,0 +1,49 @@
+<section class="container grid" id="experience">
+  <p class="headline-lg-variant title col-4 col-md-6 col-lg-12">
+    {{ i18n.translations().experience.title }}
+  </p>
+  <hr class="col-4 col-md-6 col-lg-12" />
+  <div class="experiences col-4 col-md-6 col-lg-12 grid">
+    <div
+      class="experiences__item col-4 col-md-3 col-lg-6"
+      appFadeInOnScroll
+      id="item-mundoimperial"
+    >
+      <p class="lugar">
+        Mundo Imperial<span class="separator">/</span
+        ><span class="fecha">{{ i18n.translations().experience.fecha_mundoimperial }}</span>
+      </p>
+      <p class="puesto">{{ i18n.translations().experience.role_mundoimperial }}</p>
+      <div class="description-container">
+        @for (
+          description of i18n.translations().experience.descriptions_mundoimperial;
+          track $index
+        ) {
+          <p class="descripcion">{{ description }}</p>
+        }
+      </div>
+      <div class="tecnologias">
+        <p class="tool">Laravel</p>
+        <p class="tool">MySQL</p>
+        <p class="tool">PHP</p>
+      </div>
+    </div>
+    <div class="experiences__item col-4 col-md-3 col-lg-6" appFadeInOnScroll id="item-sectur">
+      <p class="lugar">
+        SECTUR Acapulco<span class="separator">/</span
+        ><span class="fecha">{{ i18n.translations().experience.fecha_sectur }}</span>
+      </p>
+      <p class="puesto">{{ i18n.translations().experience.role_sectur }}</p>
+      <div class="description-container">
+        @for (description of i18n.translations().experience.descriptions_sectur; track $index) {
+          <p class="descripcion">{{ description }}</p>
+        }
+      </div>
+      <div class="tecnologias">
+        <p class="tool">Next.JS</p>
+        <p class="tool">PostgreSQL</p>
+        <p class="tool">MUI</p>
+      </div>
+    </div>
+  </div>
+</section>
