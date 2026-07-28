@@ -15,8 +15,8 @@ nav {
 }
 
 .container {
-  // es grid por diseño
   align-items: center;
+  align-content: center;
   height: var(--nav-height);
   opacity: 1;
   transition: opacity 300ms ease;
@@ -33,37 +33,93 @@ nav {
   color: var(--surface-tint);
 }
 
-.right-side {
+// ── Hamburguer (mobile por defecto) ─────────────────────────────
+
+.hamburger-container {
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
+}
+.hamburger {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
-  height: calc(var(--nav-height) - 2px);
+  align-self: self-end;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  justify-self: end;
+
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--on-surface);
+    transition:
+      transform 200ms ease,
+      opacity 200ms ease;
+  }
+
+  &.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  &.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+// ── Panel de navegación (mobile: dropdown; desktop: fila inline) ──
+
+.right-side {
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  padding: 0.5rem 1rem 1rem;
+  background-color: var(--surface);
+  border-bottom: 1px solid color-mix(in srgb, var(--outline) 50%, transparent);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--surface) 40%, transparent);
+
+  &.open {
+    display: flex;
+  }
 
   p {
     cursor: pointer;
     position: relative;
-    transform: translateY(-1px);
+    padding: 0.85rem 0;
+    transform: none;
 
     &.active {
       font-weight: 700;
 
       &::after {
         content: '';
-
-        // transform: translateY(-1px);
         position: absolute;
-
         left: 0;
         right: 0;
-        bottom: -6px;
-
+        bottom: 4px;
         height: 2px;
-
         background: var(--on-surface);
       }
     }
+  }
+
+  button {
+    justify-content: center;
+    margin: 0.5rem 0;
   }
 }
 
@@ -71,29 +127,18 @@ button {
   all: unset;
   box-sizing: border-box;
   cursor: pointer;
-
   display: inline-flex;
   align-items: baseline;
   gap: 0.35rem;
-
   border: 1px solid var(--outline);
   padding: 6px 8px 4px;
   margin: 4px 0;
-
   font-family: 'Courier Prime', monospace;
   font-size: 12px;
   font-weight: 400;
-
   user-select: none;
 
-  .icon-language {
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    align-items: baseline;
-    transform: translateY(1px);
-  }
-
+  .icon-language,
   .icon-theme {
     width: 10px;
     height: 10px;
@@ -101,4 +146,44 @@ button {
     align-items: baseline;
     transform: translateY(1px);
   }
+}
+
+// Tablet
+@media (min-width: 768px) {
+  .hamburger-container {
+    display: none;
+  }
+
+  .right-side {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    height: calc(var(--nav-height) - 2px);
+    padding: 0;
+    background: transparent;
+    border-bottom: none;
+    box-shadow: none;
+
+    p {
+      padding: 0;
+      transform: translateY(-1px);
+
+      &.active::after {
+        bottom: -6px;
+      }
+    }
+
+    button {
+      margin: 4px 0;
+    }
+  }
+}
+
+// Desktop
+@media (min-width: 1200px) {
+  // tu grid ya distribuye col-lg-2 / col-lg-10 aquí; no hace falta
+  // tocar el layout del panel en este breakpoint.
 }

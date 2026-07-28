@@ -1,7 +1,23 @@
 <nav>
   <div class="container grid">
-    <div class="my-name col-1 col-md-1 col-lg-2">Jesús Miranda</div>
-    <div class="right-side col-3 col-md-5 col-lg-10">
+    <div class="my-name col-2 col-md-1 col-lg-2">Jesús Miranda</div>
+
+    <div class="hamburger-container col-2">
+      <button
+        class="hamburger"
+        type="button"
+        [class.active]="menuOpen()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-label="Abrir menú de navegación"
+        (click)="toggleMenu()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="right-side col-md-5 col-lg-10" [class.open]="menuOpen()">
       <p
         class="hero"
         [class.active]="currentSection() === 'hero'"

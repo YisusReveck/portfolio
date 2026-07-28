@@ -31,7 +31,8 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  column-gap: 2rem;
   color: var(--primary);
   align-items: center;
 

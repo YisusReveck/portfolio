@@ -23,6 +23,16 @@ export class Navbar implements AfterViewInit, OnDestroy {
   private observer?: IntersectionObserver;
   private activeSections = new Set<string>();
 
+  menuOpen = signal(false);
+
+  toggleMenu() {
+    this.menuOpen.update((open) => !open);
+  }
+
+  closeMenu() {
+    this.menuOpen.set(false);
+  }
+
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) {
       return;
@@ -41,13 +51,6 @@ export class Navbar implements AfterViewInit, OnDestroy {
         this.updateActiveSection();
       },
       {
-        /*
-          EXPLICACIÓN DEL ROOTMARGIN PARA TU NAVBAR STICKY:
-          - Arriba (la altura del nav): Le resta la altura de tu navbar sticky
-            para que el punto de activación no ocurra "debajo" del navbar.
-          - Abajo (-50%): Pone la "línea de disparo" a la mitad de la pantalla.
-          Así, en cuanto el encabezado de una sección cruza la mitad del viewport, se activa.
-        */
         rootMargin: '-49px 0px -50% 0px',
         threshold: 0, // Con 0, se dispara en cuanto 1 solo píxel cruce la franja
       },
@@ -108,6 +111,7 @@ export class Navbar implements AfterViewInit, OnDestroy {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
+    this.closeMenu();
   }
 
   ngOnDestroy(): void {

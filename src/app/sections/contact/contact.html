@@ -9,11 +9,11 @@
     novalidate
     class="correo grid col-4 col-md-6 col-lg-12"
   >
-    <div class="header col-4 col-md-6 col-lg-12">
-      <p class="correo__title">
+    <div class="header col-4 col-md-6 col-lg-12 grid">
+      <p class="correo__title col-4 col-md-3 col-lg-6">
         {{ i18n.translations().contact.postaltitle }} / <span style="font-size: 0.8rem">郵便</span>
       </p>
-      <p class="correo__fecha">
+      <p class="correo__fecha col-4 col-md-3 col-lg-6">
         {{ today | date: 'MMM dd, yyyy' : undefined : i18n.locale() | titlecase }}
       </p>
     </div>
