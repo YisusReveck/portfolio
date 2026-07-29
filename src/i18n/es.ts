@@ -1,6 +1,6 @@
 export const es = {
   cv: {
-    file: 'CV_Jesús Francisco Miranda Orbe - ES',
+    file: 'CV_Jesús Francisco Miranda Orbe - ES.pdf',
     text: 'Descargar CV',
   },
   navbar: {
