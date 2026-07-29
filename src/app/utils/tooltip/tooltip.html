@@ -1,0 +1,14 @@
+<ng-content />
+
+@if (visible()) {
+  <div
+    class="tooltip"
+    [class.tooltip--bottom]="resolvedPlacement() === 'bottom'"
+    [style.--host-top.px]="pos().top"
+    [style.--host-left.px]="pos().left"
+    role="tooltip"
+  >
+    <span class="tooltip__box">{{ text }}</span>
+    <span class="tooltip__arrow"></span>
+  </div>
+}

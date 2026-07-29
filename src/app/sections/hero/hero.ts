@@ -1,10 +1,11 @@
 import { Component, DestroyRef, inject, OnInit, signal, PLATFORM_ID } from '@angular/core';
 import { I18nService } from '@i18n/i18n.service';
 import { isPlatformBrowser } from '@angular/common';
+import { Tooltip } from '@utils/tooltip/tooltip';
 
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [Tooltip],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })

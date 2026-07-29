@@ -1,4 +1,8 @@
 export const en = {
+  cv: {
+    file: 'CV_Jesus Francisco Miranda Orbe - EN.pdf',
+    text: 'Download CV',
+  },
   navbar: {
     contact: 'Contact',
     home: 'Home',
@@ -12,6 +16,7 @@ export const en = {
     description:
       'Passionate about programming and mathematics. Interested in software development, user experience, and building robust solutions.',
     polaroid: 'me',
+    email: 'My email',
   },
   experience: {
     title: 'Experience',

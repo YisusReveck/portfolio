@@ -1,0 +1,61 @@
+// El host debe ser inline para no romper layouts de texto
+:host {
+  display: inline;
+  position: relative; // solo para que ng-content fluya bien — el tooltip usa fixed
+}
+
+.tooltip {
+  // Posición via CSS custom props pasadas desde el componente
+  position: fixed;
+  top: var(--host-top);
+  left: var(--host-left);
+  transform: translateX(-50%) translateY(-100%);
+  z-index: 9999;
+  pointer-events: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // Animación de entrada
+  animation: tooltip-in 0.18s ease-out forwards;
+
+  &--bottom {
+    transform: translateX(-50%) translateY(0%);
+    flex-direction: column-reverse;
+
+    .tooltip__arrow {
+      border-bottom: var(--arrow-size) solid color-mix(in srgb, var(--primary) 90%, transparent);
+      border-top: none;
+    }
+  }
+}
+
+.tooltip__box {
+  background: color-mix(in srgb, var(--primary) 90%, transparent);
+  color: var(--on-primary);
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.tooltip__arrow {
+  --arrow-size: 6px;
+  width: 0;
+  height: 0;
+  border-left: var(--arrow-size) solid transparent;
+  border-right: var(--arrow-size) solid transparent;
+  border-top: var(--arrow-size) solid color-mix(in srgb, var(--primary) 90%, transparent);
+}
+
+@keyframes tooltip-in {
+  from {
+    opacity: 0;
+    translate: 0 -4px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

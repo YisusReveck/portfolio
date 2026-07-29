@@ -16,7 +16,8 @@
     "paths": {
       "@i18n/*": ["./src/i18n/*"],
       "@theme/*": ["./src/theme/*"],
-      "@sections/*": ["./src/app/sections/*"]
+      "@sections/*": ["./src/app/sections/*"],
+      "@utils/*": ["./src/app/utils/*"]
     }
   },
   "angularCompilerOptions": {
