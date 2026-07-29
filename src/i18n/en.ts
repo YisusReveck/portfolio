@@ -18,14 +18,14 @@ export const en = {
     fecha_mundoimperial: 'Jan 2025 — Jun 2025',
     role_mundoimperial: 'Full-Stack Developer',
     descriptions_mundoimperial: [
-      'Developed and deployed Laravel web modules for the Wellness and SPA departments, including a gym access control system using QR code validation.',
-      'Designed and developed an inventory management module for the boutique, implementing the FIFO (First In, First Out) method for stock control.',
+      'Designed and developed an end-to-end gym access control module using Laravel (database, business logic, and QR code validation) for a hotel chain.',
+      'Designed and developed an inventory management module for a boutique, implementing the FIFO inventory method, inter-branch stock transfers, and validations to prevent data inconsistencies.',
     ],
     fecha_sectur: 'Jul 2024 — Dec 2024',
-    role_sectur: 'Web Development & IT Support',
+    role_sectur: 'Web Developer & IT Support',
     descriptions_sectur: [
-      'Maintained and continuously improved the organization’s website, including bug fixes, feature updates, and the implementation of cybersecurity measures.',
-      'Developed intuitive administrative modules with Next.js to streamline internal workflows.',
+      'Maintained and enhanced a Next.js website in a 3-person team, including bug fixes and code refactoring.',
+      'Developed administrative modules to digitize internal requests and reports, including generation of branded PDF documents used by ~50 employees.',
     ],
   },
   projects: {

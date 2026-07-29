@@ -18,14 +18,14 @@ export const es = {
     fecha_mundoimperial: 'Ene 2025 — Jun 2025',
     role_mundoimperial: 'Desarrollador Fullstack',
     descriptions_mundoimperial: [
-      'Desarrollo y despliegue de módulos web con Laravel para las áreas de bienestar y SPA, incluyendo un sistema de control de acceso al gimnasio mediante validación por código QR.',
-      'Diseño y desarrollo de un módulo de gestión de inventario para boutique, aplicando el método PEPS (FIFO) para el control de existencias.',
+      'Diseño y desarrollo end-to-end de un módulo de control de acceso a gimnasio con Laravel (base de datos, lógica de negocio y validación por código QR) para una cadena hotelera.',
+      'Diseño y desarrollo de un módulo de gestión de inventario para boutique, implementando el método PEPS (FIFO), control de existencias entre sucursales y validaciones para prevenir inconsistencias de datos.',
     ],
     fecha_sectur: 'Jul 2024 — Dic 2024',
-    role_sectur: 'Desarrollo Web y Soporte de TI',
+    role_sectur: 'Desarrollador Web y Soporte de TI',
     descriptions_sectur: [
-      'Mantenimiento y mejora continua del sitio web, incluyendo corrección de errores, actualización de funcionalidades e implementación de medidas de ciberseguridad.',
-      'Desarrollo de módulos administrativos intuitivos para optimizar tareas internas con Next.js.',
+      'Mantenimiento y mejora continua de un sitio web en Next.js (trabajo en equipo de 3 personas), incluyendo corrección de errores y refactorización de código.',
+      'Desarrollo de módulos administrativos para digitalizar solicitudes y reportes internos, incluyendo generación de documentos PDF membretados, usados por ~50 empleados.',
     ],
   },
   projects: {
